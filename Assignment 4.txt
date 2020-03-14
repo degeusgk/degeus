@@ -1,0 +1,39 @@
+In this project we will analyze a dataset which contains information about taxi rides in NYC.  The data set is quite large so getting a basic idea of what the data contains is important.  Each student should use one of the CSV files.  Answer the following questions:
+
+1. What time range does your data cover?  How many rows are there total?
+	2013-03-01 00:00:04 - 2013-03-31 01:20:00
+	15749229
+
+2. What are the field names?  Give descriptions for each field. 
+	"medallion, hack_license, vendor_id, rate_code, store_and_fwd_flag, pickup_datetime, dropoff_datetime, passenger_count, trip_time_in_secs, trip_distance, pickup_longitude, pickup_latitude, dropoff_longitude, dropoff_latitude"
+
+3. Give some sample data for each field.
+	['FE7B354FEB67B9C94BD34EA54469691C', '2C78614ADC9C602EC70D65CCB4E63B14', 'CMT', '1', 'N', '2013-03-01 00:00:04', '2013-03-01 00:19:03', '1', '1138', '14.30', '-73.776703', '40.645164', '-73.913925', '40.772614']
+
+4. What MySQL data types would you need to store each of the fields?
+	a. int(xx), varchar(xx),date,datetime,bool, decimal(m,d)
+	varchar, varchar, varchar, int, varchar, datetime, datetime, int, int, decimal, decimal, decimal, decimal, decimal
+	
+5. What is the geographic range of your data (min/max - X/Y)?
+		The minimum latitude is 40.584061
+		The maxmimum pickup latitude is 40.890907
+		The minimum dropoff longitude is -73.739677
+		The maxmimum dropoff longitude is -74.047653
+	a. Plot this (approximately on a map)
+
+6. What are the distinct values for each field? (If applicable)
+	{'CMT': 152, 'VTS': 848}
+	{'1': 963, '2': 31, '5': 6}
+	{'N': 149, 'Y': 3, '': 848}
+	{'1': 633, '2': 147, '4': 23, '3': 45, '5': 100, '6': 52}
+	
+7. For other numeric types besides lat and lon, what are the min and max values?
+rate_code,passenger_count,trip_time_in_secs,trip_distance
+8. Create a chart which shows the average number of passengers each hour of the day.
+	Done
+9. Create a new CSV file which has only one out of every thousand rows.
+	Done
+10. Repeat step 8 with the reduced dataset and compare the two charts.
+	Done
+
+++htgLvv80s4
