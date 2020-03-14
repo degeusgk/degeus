@@ -67,6 +67,7 @@ This is determined by printing the first row consumed by the script
 	- dropoff_latitude = decimal 
 
 5. What is the geographic range of your data (min/max - X/Y)?
+
 I assumed that only valid lat and long data was within 1 degree of the real coordinates of NYC.
 Minimum is 39.516666, -74.5
 Maximum is 40.5, -73.5
