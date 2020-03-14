@@ -49,6 +49,7 @@ This is determined by printing the first row consumed by the script
 	- pickup_latitude = 40.645164 
 	- dropoff_longitude = -73.913925 
 	- dropoff_latitude = 40.772614 
+
 4. What MySQL data types would you need to store each of the fields?
 	- medallion = varchar
 	- hack_license = varchar
@@ -66,8 +67,11 @@ This is determined by printing the first row consumed by the script
 	- dropoff_latitude = decimal 
 
 5. What is the geographic range of your data (min/max - X/Y)?
-#insert map here
-
+I assumed that only valid lat and long data was within 1 degree of the real coordinates of NYC.
+Minimum is 39.516666, -74.5
+Maximum is 40.5, -73.5
+  ![Map of lat and long](/map.png)
+Note: I also seemed to get this wrong after much effort and ran out of time.
 6. What are the distinct values for each field? (If applicable)
     - vendor_id = CMT, VTS
     - rate_code = 1, 2, 5, 3, 4, 6, 0, 210, 9, 7, 8, 17
@@ -75,19 +79,23 @@ This is determined by printing the first row consumed by the script
     - passenger_count = 1, 2, 4, 3, 5, 6, 0, 9, 7, 255
 
 7. For other numeric types besides lat and lon, what are the min and max values?
-    - The minimum rate code is 
-    - The maximum rate code is 
-    - The minimum passenger count is 
-    - The maximum passenger count  
-    - The minimum trip time is 
-    - The maximum trip time is  
-    - The minimum trip distance is  
-    - The maximum trip distance is 
+    - The minimum rate code is 0
+    - The maximum rate code is 9
+    - The minimum passenger count is 0
+    - The maximum passenger count is 9 
+    - The minimum trip time is 0
+    - The maximum trip time is 9
+    - The minimum trip distance is .00 
+    - The maximum trip distance is 98.80
+	Note: I honestly just didn't have time to sanitize this data and look into it.
+	
 8. Create a chart which shows the average number of passengers each hour of the day.
   ![Graph of all passenger data](/passenger.png)
+  
 9. Create a new CSV file which has only one out of every thousand rows.
 This file is included in the repository, titled every_thousandth_row.csv.
 
 10. Repeat step 8 with the reduced dataset and compare the two charts.
 ![Graph of subset of passenger data](/passenger.png)
-Overall the charts look ver similar, the popularity of taxis appears to be consistent accross the month. The highest demand is between 19:00 and 20:00, with a dip around 16:00 every day. Similarly, in the morning hours, there is a consistent drop from midnight to 5:00, where the traffic begins to pick up again, presumably due to morning commuter traffic.
+
+Overall the charts look very similar, the popularity of taxis appears to be consistent accross the month. The highest demand is between 19:00 and 20:00, with a dip around 16:00 every day. Similarly, in the morning hours, there is a consistent drop from midnight to 5:00, where the traffic begins to pick up again, presumably due to morning commuter traffic.
